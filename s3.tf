@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "prdxteam2" {
 resource "aws_s3_bucket_object" "image" {
   bucket = "prdxteam2"
   key    = "ninja.png"
-  source = "/root/Final-project-terraform/ninja.png"
+  source = "ninja.png"
   depends_on = [
     aws_s3_bucket.prdxteam2
   ]
@@ -15,7 +15,7 @@ resource "aws_s3_bucket_object" "image" {
 resource "aws_s3_bucket_object" "video" {
   bucket = "prdxteam2"
   key    = "module-free.gif"
-  source = "/root/Final-project-terraform/module-free.gif"
+  source = "module-free.gif"
   depends_on = [
     aws_s3_bucket.prdxteam2
   ]
@@ -23,7 +23,7 @@ resource "aws_s3_bucket_object" "video" {
 resource "aws_s3_bucket_object" "index" {
   bucket = "prdxteam2"
   key    = "index.html"
-  source = "/root/Final-project-terraform/index.html"
+  source = "index.html"
   depends_on = [
     aws_s3_bucket.prdxteam2
   ]
@@ -31,7 +31,7 @@ resource "aws_s3_bucket_object" "index" {
 resource "aws_s3_bucket_object" "default_images" {
   bucket = "prdxteam2"
   key    = "index-images.html"
-  source = "/root/Final-project-terraform/index-images.html"
+  source = "index-images.html"
   depends_on = [
     aws_s3_bucket.prdxteam2
   ]
@@ -39,7 +39,7 @@ resource "aws_s3_bucket_object" "default_images" {
 resource "aws_s3_bucket_object" "default_gif" {
   bucket = "prdxteam2"
   key    = "index-gif.html"
-  source = "/root/Final-project-terraform/index-gif.html"
+  source = "index-gif.html"
   depends_on = [
     aws_s3_bucket.prdxteam2
   ]
