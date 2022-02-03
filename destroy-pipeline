@@ -8,6 +8,13 @@ pipeline {
                 git branch: 'main', url: 'git@github.com:gulnara36/terraform-aws.git'
             }
         }
+        
+         stage('TFInit') {
+            steps {
+                //terraform initialize
+                sh "terraform init"
+            }
+        }
 
         stage('TFdestroy') {
             steps {
