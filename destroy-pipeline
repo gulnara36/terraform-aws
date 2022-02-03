@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'git@github.com:gulnara36/terraform-aws.git'
+            }
+        }
+
+        stage('TFInit') {
+            steps {
+                //terraform destroy
+                sh "terraform destroy"
+            }
+        }
