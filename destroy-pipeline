@@ -15,6 +15,17 @@ pipeline {
                 sh "terraform init"
             }
         }
+         stage('TFPlan') {
+            steps {
+                sh "terraform fmt"
+                sh "terraform plan"
+            }
+        }
+        stage('TFApply') {
+            steps {
+                sh "terraform apply -auto-approve"
+            }
+        }
 
         stage('TFdestroy') {
             steps {
