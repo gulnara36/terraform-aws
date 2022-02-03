@@ -9,7 +9,7 @@ pipeline {
             }
         }
 
-        stage('TFInit') {
+        stage('TFdestroy') {
             steps {
                 //terraform destroy
                 sh "terraform destroy"
